@@ -1,0 +1,49 @@
+#include <vector>
+#include <string>
+#include "Neurone.h"
+
+using namespace std;
+
+#ifndef RESEAU
+#define RESEAU
+
+/**
+ * @class ReseauNeurone classe abstraite représentant un réseau de neurones.
+ */
+class ReseauNeurone {
+
+protected:
+	vector<Neurone> Neurones;
+
+public:
+	/**
+	 * @brief Cette méthode permet de charger un réseau lu dans un fichier.
+	 * @param path une chaine de caractère décrivant le nom du fichier dans lequel est stocké le réseau.
+	 * @return Si oui ou non le chargement s'est bien déroulé.
+	 */
+	virtual bool chargerReseau (string path) = 0;
+
+	/**
+	 * @brief Cette méthode permet de sauvegarder un réseau dans un fichier.
+	 * @param path une chaine de caractère décrivant le nom du fichier dans lequel on stocke le réseau.
+	 * @return Si oui ou non la sauvegarde s'est bien déroulée.
+	 */
+	virtual bool sauvegarderReseau (string path) = 0;
+
+	/**
+	 * @brief Cette méthode permet de réaliser une étape d'apprentissage.
+	 * @param entrees liste des entrées pour le jeu d'apprentiassage.
+	 * @param valeursAttendues les valeurs attendues en sortie pour chacune de ses entrées.
+	 * @param n la taille de l'échantillon d'apprentissage.
+	 */
+	void apprendre (vector<double> *entrees,vector<double> *valeursAttendues,int n);
+
+	/**
+	 * @brief Cette méthode permet de calculer le résultat sur la couche de sortie.
+	 * @return la valeur des résultats.
+	 */
+	vector<double> calculerResultat (vector<double> valeurEntree);
+
+};
+
+#endif

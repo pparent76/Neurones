@@ -1,0 +1,11 @@
+/// class FonctionTransfert - 
+#ifndef FONCTIONTRANSFERT
+#define FONCTIONTRANSFERT
+class FonctionTransfert {
+	// Operations
+public:
+	double f (double x);
+	double f_inverse (double x);
+};
+
+#endif

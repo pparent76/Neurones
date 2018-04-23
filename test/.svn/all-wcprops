@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/gm11-neurones/!svn/ver/100/test
+END
+test_Neurone.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gm11-neurones/!svn/ver/100/test/test_Neurone.h
+END
+test_Sigmoide.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gm11-neurones/!svn/ver/100/test/test_Sigmoide.cpp
+END
+test_Image.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gm11-neurones/!svn/ver/100/test/test_Image.cpp
+END
+test_ReseauNeuronesCouches.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gm11-neurones/!svn/ver/100/test/test_ReseauNeuronesCouches.h
+END
+main_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gm11-neurones/!svn/ver/100/test/main_test.cpp
+END
+test_Sigmoide.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/gm11-neurones/!svn/ver/100/test/test_Sigmoide.h
+END
+test_Image.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/gm11-neurones/!svn/ver/100/test/test_Image.h
+END
+cppunit-report.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gm11-neurones/!svn/ver/67/test/cppunit-report.xml
+END
+test_Neurone.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gm11-neurones/!svn/ver/100/test/test_Neurone.cpp
+END
+makefile
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/gm11-neurones/!svn/ver/57/test/makefile
+END
+test_ReseauNeuronesCouches.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/gm11-neurones/!svn/ver/100/test/test_ReseauNeuronesCouches.cpp
+END

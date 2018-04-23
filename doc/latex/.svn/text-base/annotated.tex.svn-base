@@ -1,0 +1,13 @@
+\section{Liste des classes}
+Liste des classes, structures, unions et interfaces avec une brève description :\begin{DoxyCompactList}
+\item\contentsline{section}{\hyperlink{classFonctionTransfert}{FonctionTransfert} (Class \hyperlink{classFonctionTransfert}{FonctionTransfert} -\/ )}{\pageref{classFonctionTransfert}}{}
+\item\contentsline{section}{\hyperlink{classIHM}{IHM} (Cette classe a pour but de charger l'interface en mode console )}{\pageref{classIHM}}{}
+\item\contentsline{section}{\hyperlink{classImage}{Image} (Cette classe a pour but de charger facilement des images et de réaliser des traitements basiques dessus )}{\pageref{classImage}}{}
+\item\contentsline{section}{\hyperlink{classNeurone}{Neurone} }{\pageref{classNeurone}}{}
+\item\contentsline{section}{\hyperlink{classNeuroneChainee}{NeuroneChainee} }{\pageref{classNeuroneChainee}}{}
+\item\contentsline{section}{\hyperlink{classReseauNeurone}{ReseauNeurone} }{\pageref{classReseauNeurone}}{}
+\item\contentsline{section}{\hyperlink{classReseauNeuroneChainees}{ReseauNeuroneChainees} }{\pageref{classReseauNeuroneChainees}}{}
+\item\contentsline{section}{\hyperlink{classReseauNeuronesChainees}{ReseauNeuronesChainees} }{\pageref{classReseauNeuronesChainees}}{}
+\item\contentsline{section}{\hyperlink{classReseauNeuronesCouches}{ReseauNeuronesCouches} }{\pageref{classReseauNeuronesCouches}}{}
+\item\contentsline{section}{\hyperlink{classSigmoide}{Sigmoide} (Class Sigmoïde -\/ )}{\pageref{classSigmoide}}{}
+\end{DoxyCompactList}

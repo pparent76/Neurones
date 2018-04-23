@@ -1,0 +1,36 @@
+#include "Neurone.h"
+#include "ReseauNeuronesChainees.h"
+
+#ifndef NEURONECHAINE
+#define NEURONECHAINE
+/**
+ * @class NeuroneChainee Cette classe hérite de la classe neurone et permet de de réaliser des
+ * réseaux de neurones en graphe
+ */
+class NeuroneChainee : public Neurone {
+
+private:
+	int nombreSucceseurs;
+	Neurone* antecedents;
+	Neurone* successeurs;
+
+	bool estCalcule;
+	bool estEstime;
+
+public:
+  /**
+   * @brief Cette méthode permet de calculer la valeur du neurone en faisant des appels récurcifs.
+   * La méthode calcule le resultat et la met dans la variable.
+   * @return donne la valeur.
+   */
+  double calculerValeur ();
+  
+  /**
+   * @brief Cette méthode permet de calculer l'erreur du neurone en faisant des appels récurcifs.
+   * La méthode calcule le resultat et la met dans la variable.
+   * @return donne l'erreur.
+   */
+  double calculerErreur ();
+};
+
+#endif

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/gm11-neurones/!svn/ver/103/src
+END
+Sigmoide.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gm11-neurones/!svn/ver/78/src/Sigmoide.cpp
+END
+Sigmoide.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/gm11-neurones/!svn/ver/78/src/Sigmoide.h
+END
+ReseauNeuronesChainees.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gm11-neurones/!svn/ver/96/src/ReseauNeuronesChainees.h
+END
+Neurone.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/gm11-neurones/!svn/ver/96/src/Neurone.cpp
+END
+FonctionTransfert.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/gm11-neurones/!svn/ver/78/src/FonctionTransfert.h
+END
+IHM.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/gm11-neurones/!svn/ver/103/src/IHM.cpp
+END
+ReseauNeuronesCouches.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/gm11-neurones/!svn/ver/96/src/ReseauNeuronesCouches.cpp
+END
+Neurone.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/gm11-neurones/!svn/ver/96/src/Neurone.h
+END
+IHM.h
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/gm11-neurones/!svn/ver/96/src/IHM.h
+END
+Image.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/gm11-neurones/!svn/ver/87/src/Image.cpp
+END
+ReseauNeuronesCouches.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/gm11-neurones/!svn/ver/101/src/ReseauNeuronesCouches.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/gm11-neurones/!svn/ver/101/src/main.cpp
+END
+ReseauNeurone.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/gm11-neurones/!svn/ver/96/src/ReseauNeurone.h
+END
+Image.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/gm11-neurones/!svn/ver/96/src/Image.h
+END
+NeuroneChainee.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gm11-neurones/!svn/ver/96/src/NeuroneChainee.h
+END

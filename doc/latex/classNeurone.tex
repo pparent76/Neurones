@@ -1,0 +1,256 @@
+\hypertarget{classNeurone}{
+\section{Référence de la classe Neurone}
+\label{classNeurone}\index{Neurone@{Neurone}}
+}
+Graphe d'héritage de Neurone:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNeurone}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNeurone_a8584aa9020d36c16e695b623daaf1776}{Neurone} (int identifiant, int nbAntecedents)
+\begin{DoxyCompactList}\small\item\em Ceci est le créateur d'un neurone. \end{DoxyCompactList}\item 
+\hypertarget{classNeurone_a82d4936ed8ac6c87cb07c117eca23953}{
+{\bfseries Neurone} (const \hyperlink{classNeurone}{Neurone} \&n)}
+\label{classNeurone_a82d4936ed8ac6c87cb07c117eca23953}
+
+\item 
+virtual void \hyperlink{classNeurone_aba7e64f609a6bf0d154ef1a6f6230be6}{chargerNeurone} (ifstream $\ast$sauvegarde)
+\begin{DoxyCompactList}\small\item\em Cette méthode permet de lire un neurone dans un fichier. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classNeurone_a4e0c2a9243285ff1b5842792c95200d7}{sauvegarderNeurone} (ofstream $\ast$sauvegarde)
+\begin{DoxyCompactList}\small\item\em Cette méthode permet de sauvegarder un neurone dans un fichier. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classNeurone_ae645e1d7f44e896df23103555a4bc660}{calculeValeurTransfert} (vector$<$ double $>$ entreeSynaptique)
+\begin{DoxyCompactList}\small\item\em Calcule la valeur de transfert à partir des entrée synaptiques qui lui sont données. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classNeurone_a5bc0eb4b565fde75df3333ded397a4b1}{getValeurSortie} ()
+\begin{DoxyCompactList}\small\item\em Cette méthode retourne la valeur de sortie du neurone après passage dans la fonction de transfert. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classNeurone_afca63a97bda3af1aa66e355af268d709}{getIdentifiant} ()
+\begin{DoxyCompactList}\small\item\em Cette méthode retourne la valeur de l'identifiant du neurone. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classNeurone_a69db84522682c056696f55c772c85adb}{setValeurEntree} (double v)
+\begin{DoxyCompactList}\small\item\em Permet d'assigner la valeur d'entrée du neurone (utile quand le neurone est de la première couche). \end{DoxyCompactList}\item 
+virtual void \hyperlink{classNeurone_ac21b2c8c216ae35780120037fa49d428}{setPoidsSynaptic} (vector$<$ double $>$ poids)
+\begin{DoxyCompactList}\small\item\em Permet d'assigner la valeur des poids synaptiques du neurone (pour la phase d'apprentissage). \end{DoxyCompactList}\item 
+virtual vector$<$ double $>$ \hyperlink{classNeurone_ac360dcc14d2c4a3e4fd91d305c23ce7f}{getPoidsSynaptic} ()
+\begin{DoxyCompactList}\small\item\em Permet de récupérer la valeur des poids synaptiques du neurone (pour la phase d'apprentissage). \end{DoxyCompactList}\item 
+\hypertarget{classNeurone_a76611fb63e5deb9193020c141d1b3908}{
+virtual double {\bfseries getValeurAvantTrasphert} ()}
+\label{classNeurone_a76611fb63e5deb9193020c141d1b3908}
+
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNeurone_a063243e7659e0536178213f0db85ed9f}{
+int {\bfseries identifiant}}
+\label{classNeurone_a063243e7659e0536178213f0db85ed9f}
+
+\item 
+\hypertarget{classNeurone_aba2837a2cfe54ad9ae6afa8f706212bb}{
+double {\bfseries valeurTransfert}}
+\label{classNeurone_aba2837a2cfe54ad9ae6afa8f706212bb}
+
+\item 
+\hypertarget{classNeurone_a27ba6b3bcda980aa40e154047905c6f7}{
+double {\bfseries valeurErreur}}
+\label{classNeurone_a27ba6b3bcda980aa40e154047905c6f7}
+
+\item 
+\hypertarget{classNeurone_a98851f89e12cbbec4983dc2b44156e4a}{
+vector$<$ double $>$ {\bfseries poidsSynaptiques}}
+\label{classNeurone_a98851f89e12cbbec4983dc2b44156e4a}
+
+\item 
+\hypertarget{classNeurone_a7dc2d1919d027b4d030f957262405d9f}{
+\hyperlink{classFonctionTransfert}{FonctionTransfert} {\bfseries fonctionTransfert}}
+\label{classNeurone_a7dc2d1919d027b4d030f957262405d9f}
+
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNeurone_ad337320a77a70676ada0b514870dd529}{
+class {\bfseries Test\_\-Neurone}}
+\label{classNeurone_ad337320a77a70676ada0b514870dd529}
+
+\item 
+\hypertarget{classNeurone_a755d7d72d9539f75e09ce6a61ce5e702}{
+class {\bfseries Test\_\-ReseauNeuronesCouche}}
+\label{classNeurone_a755d7d72d9539f75e09ce6a61ce5e702}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+représente un neurone. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classNeurone_a8584aa9020d36c16e695b623daaf1776}{
+\index{Neurone@{Neurone}!Neurone@{Neurone}}
+\index{Neurone@{Neurone}!Neurone@{Neurone}}
+\subsubsection[{Neurone}]{\setlength{\rightskip}{0pt plus 5cm}Neurone::Neurone (
+\begin{DoxyParamCaption}
+\item[{int}]{identifiant, }
+\item[{int}]{nbAntecedents}
+\end{DoxyParamCaption}
+)}}
+\label{classNeurone_a8584aa9020d36c16e695b623daaf1776}
+
+
+Ceci est le créateur d'un neurone. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em identifiant} & le numéro d'identification du neurone. \\
+\hline
+{\em nbAntecedents} & le nombre d'antecedents qu'aura le neurone (c'est à dire le nombre de coefficient synaptic qu'il aura) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classNeurone_ae645e1d7f44e896df23103555a4bc660}{
+\index{Neurone@{Neurone}!calculeValeurTransfert@{calculeValeurTransfert}}
+\index{calculeValeurTransfert@{calculeValeurTransfert}!Neurone@{Neurone}}
+\subsubsection[{calculeValeurTransfert}]{\setlength{\rightskip}{0pt plus 5cm}void Neurone::calculeValeurTransfert (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{entreeSynaptique}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classNeurone_ae645e1d7f44e896df23103555a4bc660}
+
+
+Calcule la valeur de transfert à partir des entrée synaptiques qui lui sont données. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em entreeSynaptique} & donne les valeurs aux entrées du neurones. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNeurone_aba7e64f609a6bf0d154ef1a6f6230be6}{
+\index{Neurone@{Neurone}!chargerNeurone@{chargerNeurone}}
+\index{chargerNeurone@{chargerNeurone}!Neurone@{Neurone}}
+\subsubsection[{chargerNeurone}]{\setlength{\rightskip}{0pt plus 5cm}void Neurone::chargerNeurone (
+\begin{DoxyParamCaption}
+\item[{ifstream $\ast$}]{sauvegarde}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classNeurone_aba7e64f609a6bf0d154ef1a6f6230be6}
+
+
+Cette méthode permet de lire un neurone dans un fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em sauvegarde} & le fichier dans lequel il faut lire le neurone. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNeurone_afca63a97bda3af1aa66e355af268d709}{
+\index{Neurone@{Neurone}!getIdentifiant@{getIdentifiant}}
+\index{getIdentifiant@{getIdentifiant}!Neurone@{Neurone}}
+\subsubsection[{getIdentifiant}]{\setlength{\rightskip}{0pt plus 5cm}int Neurone::getIdentifiant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classNeurone_afca63a97bda3af1aa66e355af268d709}
+
+
+Cette méthode retourne la valeur de l'identifiant du neurone. 
+
+\begin{DoxyReturn}{Renvoie}
+l'identifiant du neurone. 
+\end{DoxyReturn}
+\hypertarget{classNeurone_ac360dcc14d2c4a3e4fd91d305c23ce7f}{
+\index{Neurone@{Neurone}!getPoidsSynaptic@{getPoidsSynaptic}}
+\index{getPoidsSynaptic@{getPoidsSynaptic}!Neurone@{Neurone}}
+\subsubsection[{getPoidsSynaptic}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$ double, std::allocator$<$ double $>$ $>$ Neurone::getPoidsSynaptic (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classNeurone_ac360dcc14d2c4a3e4fd91d305c23ce7f}
+
+
+Permet de récupérer la valeur des poids synaptiques du neurone (pour la phase d'apprentissage). 
+
+\begin{DoxyReturn}{Renvoie}
+la valeur des poids. 
+\end{DoxyReturn}
+\hypertarget{classNeurone_a5bc0eb4b565fde75df3333ded397a4b1}{
+\index{Neurone@{Neurone}!getValeurSortie@{getValeurSortie}}
+\index{getValeurSortie@{getValeurSortie}!Neurone@{Neurone}}
+\subsubsection[{getValeurSortie}]{\setlength{\rightskip}{0pt plus 5cm}double Neurone::getValeurSortie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classNeurone_a5bc0eb4b565fde75df3333ded397a4b1}
+
+
+Cette méthode retourne la valeur de sortie du neurone après passage dans la fonction de transfert. 
+
+\begin{DoxyReturn}{Renvoie}
+la valeur de sortie. 
+\end{DoxyReturn}
+\hypertarget{classNeurone_a4e0c2a9243285ff1b5842792c95200d7}{
+\index{Neurone@{Neurone}!sauvegarderNeurone@{sauvegarderNeurone}}
+\index{sauvegarderNeurone@{sauvegarderNeurone}!Neurone@{Neurone}}
+\subsubsection[{sauvegarderNeurone}]{\setlength{\rightskip}{0pt plus 5cm}void Neurone::sauvegarderNeurone (
+\begin{DoxyParamCaption}
+\item[{ofstream $\ast$}]{sauvegarde}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classNeurone_a4e0c2a9243285ff1b5842792c95200d7}
+
+
+Cette méthode permet de sauvegarder un neurone dans un fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em sauvegarde} & le fichier dans lequel il faut écrire le neurone. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNeurone_ac21b2c8c216ae35780120037fa49d428}{
+\index{Neurone@{Neurone}!setPoidsSynaptic@{setPoidsSynaptic}}
+\index{setPoidsSynaptic@{setPoidsSynaptic}!Neurone@{Neurone}}
+\subsubsection[{setPoidsSynaptic}]{\setlength{\rightskip}{0pt plus 5cm}void Neurone::setPoidsSynaptic (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{poids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classNeurone_ac21b2c8c216ae35780120037fa49d428}
+
+
+Permet d'assigner la valeur des poids synaptiques du neurone (pour la phase d'apprentissage). 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em poids} & les valeurs souhaitées. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNeurone_a69db84522682c056696f55c772c85adb}{
+\index{Neurone@{Neurone}!setValeurEntree@{setValeurEntree}}
+\index{setValeurEntree@{setValeurEntree}!Neurone@{Neurone}}
+\subsubsection[{setValeurEntree}]{\setlength{\rightskip}{0pt plus 5cm}void Neurone::setValeurEntree (
+\begin{DoxyParamCaption}
+\item[{double}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classNeurone_a69db84522682c056696f55c772c85adb}
+
+
+Permet d'assigner la valeur d'entrée du neurone (utile quand le neurone est de la première couche). 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em v} & la valeur souhaitée. \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants :\begin{DoxyCompactItemize}
+\item 
+/home/cocouf/Documents/gm4/gm11-\/neurones/src/Neurone.h\item 
+/home/cocouf/Documents/gm4/gm11-\/neurones/src/Neurone.cpp\end{DoxyCompactItemize}

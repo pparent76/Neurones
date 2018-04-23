@@ -1,0 +1,9 @@
+\section{Module interface}
+Ce module permettra la gestion de l'interface entre l'utilisateur et le programme de reconnaissance de caract\`ere. Il offrira un menu en ligne de commande afin de guider l'utilisateur dans les diff\'erentes possibilit\'es offertes par le logiciel.
+
+Il permettra notamment de :
+\begin{itemize}
+	\item \textit{voir diagramme de cas d'utilisations}
+\end{itemize}
+
+\ \newline Le menu en ligne de commande contiendra 2 choix possibles: Apprentissage et Reconnaissance. Dans chaque choix, on peut trouver encore des options possibles. Par exemple dans l'apprentissage, il y a "Charger Image", "Apprendre" ou "Sauvegarder le r\'ecdseau neurones", et dans Reconnaissance ce sont "Charger Image", "Charger réseau", "Reconnaissance" et finalement "Afficher les r\'esultat". Ce sont tous les fonctions dans les autres modules. 

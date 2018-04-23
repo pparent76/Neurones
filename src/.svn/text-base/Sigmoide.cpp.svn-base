@@ -1,0 +1,26 @@
+#include "Sigmoide.h"
+#include <math.h>
+#include <iostream>
+
+using namespace std;
+
+double Sigmoide::f(double x)
+{
+	return (1/(1+exp(-x))-0.5)*2;
+}
+
+double Sigmoide::f_inverse(double x)
+{
+	if (x>=1 or x<=0)
+		cout<<"Attention signmoide inverse or range"<<endl;
+	return -1.0*(log(1/(x/2+0.5)-1)) ;
+
+}
+
+double Sigmoide::f_derive(double x)
+{
+	if (x>100)
+		return 1e-5;
+	return 2*exp(x)/((1+exp(x))*(1+exp(x)));
+
+}

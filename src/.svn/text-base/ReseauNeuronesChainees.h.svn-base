@@ -1,0 +1,19 @@
+#include "ReseauNeurone.h"
+#include "NeuroneChainee.h"
+#include <vector>
+
+using namespace std;
+
+#ifndef RESEAUCHAINE
+#define RESEAUCHAINE
+
+/**
+ * @class ReseauNeuroneChainees Classe héritant du réseau de neurone permettant de réaliser un réseau de neurone chaîné.
+ */
+class ReseauNeuronesChainees:ReseauNeurone {
+private:
+	vector<NeuroneChainee> coucheDEntree;
+	vector<NeuroneChainee> coucheDeSortie;
+};
+
+#endif

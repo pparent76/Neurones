@@ -1,0 +1,261 @@
+#include "ReseauNeuronesCouches.h"
+#include "Sigmoide.h"
+#include "Neurone.h"
+#include <iostream>
+#include <fstream>
+#include "math.h"
+#define sng(x) (x>0?1:-1)
+
+using namespace std;
+
+ReseauNeuronesCouches::ReseauNeuronesCouches(){}
+
+ReseauNeuronesCouches::ReseauNeuronesCouches(int n, int nbCouche)
+{
+	matriceNeurones=new vector<Neurone> [nbCouche];
+	for (int i=0;i<nbCouche;i++)
+		for (int j=0;j<n;j++)
+		{
+			Neurone temp(j+i*nbCouches,n);
+			matriceNeurones[i].push_back(temp);
+			Neurones.push_back(temp);
+		}
+
+	nbCouches=nbCouche;
+}
+
+ReseauNeuronesCouches::ReseauNeuronesCouches(std::vector< int > nbNeuronesParCouche)
+{
+	initialiserReseau(nbNeuronesParCouche);
+}
+
+ReseauNeuronesCouches::ReseauNeuronesCouches(const ReseauNeuronesCouches& u): ReseauNeurone(u)
+{
+	Neurones=u.Neurones;
+	nbCouches=u.nbCouches;
+	matriceNeurones=new vector<Neurone>[u.nbCouches];
+	for (int i=0;i<nbCouches;i++)
+		matriceNeurones[i]=u.matriceNeurones[i];
+}
+ReseauNeuronesCouches::~ReseauNeuronesCouches()
+{
+	delete[] matriceNeurones;
+}
+
+
+bool ReseauNeuronesCouches::chargerReseau (string path){
+	int i,j,numCouche;
+	vector<int> dim;
+	ifstream sauv(path.c_str(), ios::in);
+	if(sauv){
+		sauv.ignore(20); // Ignorer "Structure du réseau"
+		sauv >> nbCouches;
+		cout << "Nombre de couches " << nbCouches << endl;
+		for(i=0; i<nbCouches; i++){
+			sauv >> j;
+			dim.push_back(j);
+		}
+		initialiserReseau(dim);
+		for(i=0; i<nbCouches; i++){
+			sauv.ignore(8);
+			sauv >> numCouche;
+			for(j=0; j<matriceNeurones[i].size(); j++){
+				matriceNeurones[i][j].chargerNeurone(&sauv);
+			}
+		}
+		sauv.close();
+		return true;
+	}
+	else{
+		cerr << "Impossible d'ouvrir le fichier ..." << endl;
+		return false;
+	}
+}
+
+
+bool ReseauNeuronesCouches::sauvegarderReseau (string path){
+	int i,j;
+	cout << "Ouverture du fichier de sauvegarde" << endl;
+	ofstream sauv(path.c_str(), ios::out);
+	if(sauv){
+		sauv << "Structure du réseau" << endl;
+		sauv << nbCouches << endl;
+		for(i=0; i<nbCouches; i++){
+			sauv << matriceNeurones[i].size() << " ";
+		}
+		sauv << endl;
+		for(i=0; i<nbCouches; i++){
+			sauv << "Couche " << i << endl;
+			for(j=0; j<matriceNeurones[i].size(); j++){
+				matriceNeurones[i][j].sauvegarderNeurone(&sauv);
+			}
+		}
+		cout << "Fermeture du fichier de sauvegarde" << endl;
+		sauv.close();
+		return true;
+	}
+	else{
+		cerr << "Impossible d'ouvrir le fichier ..." << endl;
+		return false;
+	}
+}
+
+void ReseauNeuronesCouches::initialiserReseau(vector<int> nbNeuronesParCouche){
+	int id=0;
+	if (nbNeuronesParCouche.size()==0)
+	{
+		cout<<"Erreur Tableau de taille nule"<<endl;
+		return;
+	}
+
+	matriceNeurones=new vector<Neurone> [nbNeuronesParCouche.size()];
+	for (int i=0;i<nbNeuronesParCouche.size();i++)
+		for (int j=0;j<nbNeuronesParCouche[i];j++)
+		{
+			int nbNeuronesCouchePrec;
+			if (i!=0)
+				nbNeuronesCouchePrec=nbNeuronesParCouche[i-1];
+			else
+				nbNeuronesCouchePrec=1;
+			Neurone temp(id,nbNeuronesCouchePrec);
+			id++;
+			matriceNeurones[i].push_back(temp);
+			Neurones.push_back(temp);
+		}
+	nbCouches=nbNeuronesParCouche.size();
+}
+
+std::vector<double> ReseauNeuronesCouches::valeurCouche(int noCouche)
+{
+	vector<double> res;
+	for (int i=0;i<matriceNeurones[noCouche].size();i++)
+		res.push_back(matriceNeurones[noCouche][i].getValeurSortie());
+	return res;
+}
+
+void ReseauNeuronesCouches::setEntree(std::vector< double > valeurs)
+{
+	if (valeurs.size()!=matriceNeurones[0].size())
+	{
+		cout<<"Erreur lors de l'affectation des neurones d'entrée: la taille du tableau fournis ne correspond pas"<<endl;
+		return;
+	}
+	for (int i=0;i<valeurs.size();i++)
+		matriceNeurones[0][i].setValeurEntree(valeurs[i]);
+
+}
+
+vector<double> ReseauNeuronesCouches::calculerResultat(vector<double> valeurEntree)
+{
+	vector<double> temp;
+	setEntree(valeurEntree);
+
+	for (int i=1;i<nbCouches;i++)
+	{
+		temp=valeurCouche(i-1);
+		for (int j=0;j<matriceNeurones[i].size();j++)
+			matriceNeurones[i][j].calculeValeurTransfert(temp);
+	}
+
+	return valeurCouche(nbCouches-1);
+
+}
+
+double ReseauNeuronesCouches::Moyenne(std::vector< double > valeurs)
+{
+	double res=0;
+	for (int i=0;i<valeurs.size();i++)
+		res+=valeurs[i];
+	res=res/valeurs.size();
+	return res;
+}
+
+double ReseauNeuronesCouches::EcartType(std::vector< double > valeurs)
+{
+	double res=0;
+	double moy= Moyenne(valeurs);
+	for (int i=0;i<valeurs.size();i++)
+		res+=(moy-valeurs[i])*(moy-valeurs[i]);
+	res=res/valeurs.size();
+	return res;
+}
+
+void ReseauNeuronesCouches::apprendre(std::vector< double >* entrees, std::vector< double >* valeursAttendues, int n)
+{
+	cout<<"Apprentissage"<<endl;
+	for (int i=0;i<120;i++)
+	{
+		cout<<100.0*i/120<<"%"<<endl;
+		IterationApprentissage(entrees,valeursAttendues,n);
+	}
+}
+
+
+void ReseauNeuronesCouches::IterationApprentissage(std::vector< double >* entrees, std::vector< double >* valeursAttendues, int n)
+{
+
+	//Le pourcentage de l'erreur que l'on va injecter
+	double tauxCorrection=0.007;
+	for (int i=0;i<n;i++)
+	{
+
+		vector<double> *erreur;
+		erreur=new vector<double>[nbCouches];
+
+		calculerResultat(entrees[i]);
+		for (int j=nbCouches-1;j>=0;j--)
+		{
+
+			for (int k=0;k<matriceNeurones[j].size();k++)
+			{
+				if (j==nbCouches-1)
+				{
+					erreur[j].push_back((-matriceNeurones[nbCouches-1][k].getValeurSortie()+valeursAttendues[i][k]));
+					//cout<<-matriceNeurones[nbCouches-1][k].getValeurSortie()+valeursAttendues[i][k]<<endl;
+				}
+				else
+				{
+					double E,H;
+					E=0;
+					for (int l=0;l<matriceNeurones[j+1].size();l++)
+					{
+						H=Sigmoide::f_derive(matriceNeurones[j+1][l].getValeurAvantTrasphert());
+						E+=erreur[j+1][l]*matriceNeurones[j+1][l].getPoidsSynaptic()[k]*H;
+
+					}
+					erreur[j].push_back(E);
+
+				}
+			}
+		}
+
+
+
+		for (int j=nbCouches-1;j>=1;j--)
+		{
+
+			for (int k=0;k<matriceNeurones[j].size();k++)
+			{
+				vector<double> poidsSynaptic=matriceNeurones[j][k].getPoidsSynaptic();
+				for (int l=0;l<matriceNeurones[j-1].size();l++)
+				{
+					double res;
+					res=erreur[j][k]*matriceNeurones[j-1][l].getValeurSortie();//*Sigmoide::f_derive(matriceNeurones[j][k].getValeurAvantTrasphert());
+					if (fabs(res)<1e-4)
+						res=1e-4*(res>0?1:-1);
+					//cout<<res<<endl;
+					poidsSynaptic[l]=poidsSynaptic[l]+tauxCorrection*res;
+				}
+				matriceNeurones[j][k].setPoidsSynaptic(poidsSynaptic);
+			}
+
+
+
+
+		}
+		delete[] erreur;
+	}
+
+}
+
+

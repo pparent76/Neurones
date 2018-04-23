@@ -1,0 +1,17 @@
+\section{Préparation des tests d'intégrations}
+	
+	\subsection{Test de chargement et de traitement de l'image}
+
+Il s'agira de charger une image dont on connait les caract\'eristiques et v\'erifier que l'ensemble des m\'ethodes retournent les bonnes caract\'eristiques. Cela v\'erifie la bonne coordination entre les fonctions qui permettent de charger l'image et celles qui permettent de la traiter, et le bon fonctionnement global du module de gestion des donn\'ees.
+
+	\subsection{Test d'ex\'ecution du r\'eseau de neurones}
+
+On construira un r\'eseau de neurones simple dont on simulera l'ex\'ecution \`a la main et on v\'erifiera alors que l'ex\'ecution en machine via notre programme du r\'eseau de neurone am\`ene au bon r\'esultat. Cela permet de tester la bonne int\'egration des classes neurones, reseaux de neurones, ainsi que la bonne int\'eration entre les différent neurones.
+
+	\subsection{Test de l'apprentissage}
+
+Il va falloir tester si un r\'eseaux de neurones est significativement capable d'apprendre. Pour cela il faudra que l'on ait un jeu de donn\'ee fiable que l'on utilisera pour effectuer une phase d'aprentissage, puis on v\'erifiera que l'apprentissage s'est bien d\'eroul\'e  en utilisant un jeu de donn\'ees test et en v\'erifiant que les r\'esultats donn\'ees par le r\'eseaux de neurones sage sont convainquants. On peut se fixer par exemple l'objectif que 95 \% des instances du jeu de donn\'ees test soient bien class\'ees.
+
+	\subsection{Test de l'interface}
+
+Ce test permmetra de v\'erifier que la navigation dans les menus se fait convenablement et que les bonnes fonctionalit\'es sont appel\'ees lorsque les choix sont valid\'es.

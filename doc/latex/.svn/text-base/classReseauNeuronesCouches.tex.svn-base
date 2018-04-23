@@ -1,0 +1,185 @@
+\hypertarget{classReseauNeuronesCouches}{
+\section{Référence de la classe ReseauNeuronesCouches}
+\label{classReseauNeuronesCouches}\index{ReseauNeuronesCouches@{ReseauNeuronesCouches}}
+}
+Graphe d'héritage de ReseauNeuronesCouches:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classReseauNeuronesCouches}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classReseauNeuronesCouches_aed302a8c6aacaa7930bfd82096b4f963}{ReseauNeuronesCouches} (int nbNeuronesParCouche, int nbCouches)
+\item 
+\hyperlink{classReseauNeuronesCouches_a5647e91acb7d767a6ef3adc5a47b2f1e}{ReseauNeuronesCouches} (vector$<$ int $>$ nbNeuronesParCouche)
+\item 
+\hyperlink{classReseauNeuronesCouches_a7fe22661aa7ecb0cd959968a6521efba}{ReseauNeuronesCouches} (const \hyperlink{classReseauNeuronesCouches}{ReseauNeuronesCouches} \&u)
+\item 
+bool \hyperlink{classReseauNeuronesCouches_a22f5c01ae1f95cba98cc78f08729ea52}{chargerReseau} (string path)
+\begin{DoxyCompactList}\small\item\em Cette méthode permet de charger un réseau lu dans un fichier. \end{DoxyCompactList}\item 
+bool \hyperlink{classReseauNeuronesCouches_af2506fed92099704b3da33dcdbb534a7}{sauvegarderReseau} (string path)
+\begin{DoxyCompactList}\small\item\em Cette méthode permet de sauvegarder un réseau dans un fichier. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \hyperlink{classReseauNeuronesCouches_ad2cb2070ae32e8772bf82e6d06221bdd}{calculerResultat} (vector$<$ double $>$ valeurEntree)
+\begin{DoxyCompactList}\small\item\em Cette méthode permet de calculer le résultat sur la couche de sortie. \end{DoxyCompactList}\item 
+void \hyperlink{classReseauNeuronesCouches_ad368a99d25583fd49d384516dacb3062}{apprendre} (vector$<$ double $>$ $\ast$entrees, vector$<$ double $>$ $\ast$valeursAttendues, int n)
+\begin{DoxyCompactList}\small\item\em Cette méthode permet de réaliser l'apprentissage complet à partir d'un jeu de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classReseauNeuronesCouches_a755d7d72d9539f75e09ce6a61ce5e702}{
+class {\bfseries Test\_\-ReseauNeuronesCouche}}
+\label{classReseauNeuronesCouches_a755d7d72d9539f75e09ce6a61ce5e702}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classReseauNeuronesCouches_aed302a8c6aacaa7930bfd82096b4f963}{
+\index{ReseauNeuronesCouches@{ReseauNeuronesCouches}!ReseauNeuronesCouches@{ReseauNeuronesCouches}}
+\index{ReseauNeuronesCouches@{ReseauNeuronesCouches}!ReseauNeuronesCouches@{ReseauNeuronesCouches}}
+\subsubsection[{ReseauNeuronesCouches}]{\setlength{\rightskip}{0pt plus 5cm}ReseauNeuronesCouches::ReseauNeuronesCouches (
+\begin{DoxyParamCaption}
+\item[{int}]{nbNeuronesParCouche, }
+\item[{int}]{nbCouches}
+\end{DoxyParamCaption}
+)}}
+\label{classReseauNeuronesCouches_aed302a8c6aacaa7930bfd82096b4f963}
+Ceci est le constructeur de la classe reseau neurone par couche. 
+\begin{DoxyParams}{Paramètres}
+{\em nbNeuronesParCouche} & le nombre de neurones par couche (dans ce cas le nombre de neurones par couche est fixé) \\
+\hline
+{\em nbCouches} & le nombre de couches \\
+\hline
+\end{DoxyParams}
+\hypertarget{classReseauNeuronesCouches_a5647e91acb7d767a6ef3adc5a47b2f1e}{
+\index{ReseauNeuronesCouches@{ReseauNeuronesCouches}!ReseauNeuronesCouches@{ReseauNeuronesCouches}}
+\index{ReseauNeuronesCouches@{ReseauNeuronesCouches}!ReseauNeuronesCouches@{ReseauNeuronesCouches}}
+\subsubsection[{ReseauNeuronesCouches}]{\setlength{\rightskip}{0pt plus 5cm}ReseauNeuronesCouches::ReseauNeuronesCouches (
+\begin{DoxyParamCaption}
+\item[{vector$<$ int $>$}]{nbNeuronesParCouche}
+\end{DoxyParamCaption}
+)}}
+\label{classReseauNeuronesCouches_a5647e91acb7d767a6ef3adc5a47b2f1e}
+Ceci est le constructeur de la classe reseau neurone par couche. 
+\begin{DoxyParams}{Paramètres}
+{\em nbNeuronesParCouche} & un tableau qui contient le nombre de neurone de chaque couche (ce nombre peut varier d'une couche à l'autre). Le nombre de couches retenues est la taille du tableau. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classReseauNeuronesCouches_a7fe22661aa7ecb0cd959968a6521efba}{
+\index{ReseauNeuronesCouches@{ReseauNeuronesCouches}!ReseauNeuronesCouches@{ReseauNeuronesCouches}}
+\index{ReseauNeuronesCouches@{ReseauNeuronesCouches}!ReseauNeuronesCouches@{ReseauNeuronesCouches}}
+\subsubsection[{ReseauNeuronesCouches}]{\setlength{\rightskip}{0pt plus 5cm}ReseauNeuronesCouches::ReseauNeuronesCouches (
+\begin{DoxyParamCaption}
+\item[{const {\bf ReseauNeuronesCouches} \&}]{u}
+\end{DoxyParamCaption}
+)}}
+\label{classReseauNeuronesCouches_a7fe22661aa7ecb0cd959968a6521efba}
+Ceci est le constructeur par recopie de la classe reseau neurone par couche. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classReseauNeuronesCouches_ad368a99d25583fd49d384516dacb3062}{
+\index{ReseauNeuronesCouches@{ReseauNeuronesCouches}!apprendre@{apprendre}}
+\index{apprendre@{apprendre}!ReseauNeuronesCouches@{ReseauNeuronesCouches}}
+\subsubsection[{apprendre}]{\setlength{\rightskip}{0pt plus 5cm}void ReseauNeuronesCouches::apprendre (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$ $\ast$}]{entrees, }
+\item[{vector$<$ double $>$ $\ast$}]{valeursAttendues, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}
+\label{classReseauNeuronesCouches_ad368a99d25583fd49d384516dacb3062}
+
+
+Cette méthode permet de réaliser l'apprentissage complet à partir d'un jeu de données. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em entrees} & liste des entrées pour le jeu d'apprentissage. \\
+\hline
+{\em valeursAttendues} & les valeurs attendues en sortie pour chacunes de ses entrées. \\
+\hline
+{\em n} & la taille de l'échantillon d'apprentissage. \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de \hyperlink{classReseauNeurone_ad29ad61f93877aaf2ee930106d46e48b}{ReseauNeurone}.
+
+\hypertarget{classReseauNeuronesCouches_ad2cb2070ae32e8772bf82e6d06221bdd}{
+\index{ReseauNeuronesCouches@{ReseauNeuronesCouches}!calculerResultat@{calculerResultat}}
+\index{calculerResultat@{calculerResultat}!ReseauNeuronesCouches@{ReseauNeuronesCouches}}
+\subsubsection[{calculerResultat}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ ReseauNeuronesCouches::calculerResultat (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{valeurEntree}
+\end{DoxyParamCaption}
+)}}
+\label{classReseauNeuronesCouches_ad2cb2070ae32e8772bf82e6d06221bdd}
+
+
+Cette méthode permet de calculer le résultat sur la couche de sortie. 
+
+\begin{DoxyReturn}{Renvoie}
+la valeur des résultats. 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \hyperlink{classReseauNeurone_add3e1d607bc614ca36b0375daf546106}{ReseauNeurone}.
+
+\hypertarget{classReseauNeuronesCouches_a22f5c01ae1f95cba98cc78f08729ea52}{
+\index{ReseauNeuronesCouches@{ReseauNeuronesCouches}!chargerReseau@{chargerReseau}}
+\index{chargerReseau@{chargerReseau}!ReseauNeuronesCouches@{ReseauNeuronesCouches}}
+\subsubsection[{chargerReseau}]{\setlength{\rightskip}{0pt plus 5cm}bool ReseauNeuronesCouches::chargerReseau (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classReseauNeuronesCouches_a22f5c01ae1f95cba98cc78f08729ea52}
+
+
+Cette méthode permet de charger un réseau lu dans un fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em path} & une chaine de caractère décrivant le nom du fichier dans lequel est stocké le réseau. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Si oui ou non le chargement s'est bien déroulé. 
+\end{DoxyReturn}
+
+
+Implémente \hyperlink{classReseauNeurone_ac2bccb9c9106a989960246e8f173d93a}{ReseauNeurone}.
+
+\hypertarget{classReseauNeuronesCouches_af2506fed92099704b3da33dcdbb534a7}{
+\index{ReseauNeuronesCouches@{ReseauNeuronesCouches}!sauvegarderReseau@{sauvegarderReseau}}
+\index{sauvegarderReseau@{sauvegarderReseau}!ReseauNeuronesCouches@{ReseauNeuronesCouches}}
+\subsubsection[{sauvegarderReseau}]{\setlength{\rightskip}{0pt plus 5cm}bool ReseauNeuronesCouches::sauvegarderReseau (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classReseauNeuronesCouches_af2506fed92099704b3da33dcdbb534a7}
+
+
+Cette méthode permet de sauvegarder un réseau dans un fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em path} & une chaine de caractère décrivant le nom du fichier dans lequel on stocke le réseau. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Si oui ou non la sauvegarde s'est bien déroulée. 
+\end{DoxyReturn}
+
+
+Implémente \hyperlink{classReseauNeurone_a33c828f2e2b7a190eff04c613707a9d4}{ReseauNeurone}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants :\begin{DoxyCompactItemize}
+\item 
+/home/cocouf/Documents/gm4/gm11-\/neurones/src/ReseauNeuronesCouches.h\item 
+/home/cocouf/Documents/gm4/gm11-\/neurones/src/ReseauNeuronesCouches.cpp\end{DoxyCompactItemize}

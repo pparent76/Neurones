@@ -1,0 +1,2 @@
+\section{Module r\'eseau de neurones}
+Ce module permettra la reconnaissance de caract\`eres gr\^ace \`a un r\'eseau de neurone. Il permettra donc d'effectuer les fonctionnalit\'es de reconnaissance et d'apprentissage. Il permettra l'impl\'ementation de r\'eseaux multicouches, avec diff\'erentes fonctions d'activations.

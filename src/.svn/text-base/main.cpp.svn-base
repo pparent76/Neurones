@@ -1,0 +1,152 @@
+#include "IHM.h"
+/*
+#include "Image.h"
+#include "Neurone.h"
+#include "ReseauNeuronesCouches.h"
+#include "IHM.h"
+#include <iostream>
+#define NBTEST 15
+#define NBAPPRA 24
+#define NBAPPRB 25
+*/
+
+/*
+string str(int number)
+{
+	if (number == 0)
+		return "0";
+	string temp="";
+	string returnvalue="";
+	while (number>0)
+	{
+		temp+=number%10+48;
+		number/=10;
+	}
+	for (int i=0;i<temp.length();i++)
+		returnvalue+=temp[temp.length()-i-1];
+	return returnvalue;
+} */
+
+int main()
+{
+	IHM ihm;
+	ihm.menu();
+	
+	/*
+	vector<Image> a;
+	vector<Image> test;
+	vector<double> corect; 
+	for (int i=1;i<=NBAPPRA;i++)
+		a.push_back(Image("img/appr_a"+str(i)+".bmp"));
+	for (int i=1;i<=NBAPPRB;i++)
+		a.push_back(Image("img/appr_b"+str(i)+".bmp"));
+
+	for (int i=1;i<=NBTEST;i++)
+		test.push_back(Image("img/test"+str(i)+".bmp"));
+
+
+	corect.push_back(1);
+	corect.push_back(0);
+	corect.push_back(0);
+	corect.push_back(1);
+	corect.push_back(0);
+	corect.push_back(0);
+	corect.push_back(0);
+	corect.push_back(1);
+	corect.push_back(1);
+	corect.push_back(0);
+	corect.push_back(0);
+	corect.push_back(0);
+	corect.push_back(0);
+	corect.push_back(0);
+	corect.push_back(1);
+
+	vector<double> in[100];
+	vector<double> out[100];
+	vector<double> out1,out2;
+	vector<int> dim;
+
+	dim.push_back(900);
+	// dim.push_back(900);
+	// dim.push_back(500);
+	// dim.push_back(500);
+	// dim.push_back(100);
+	// dim.push_back(20);
+	// dim.push_back(20);
+	// dim.push_back(20);
+	// dim.push_back(10);
+	// dim.push_back(2);
+	// dim.push_back(20);
+	dim.push_back(12);
+	dim.push_back(10);
+	// dim.push_back(10);
+	// dim.push_back(10);
+	// dim.push_back(10);
+	// dim.push_back(10);
+	// dim.push_back(2);
+	dim.push_back(2);
+	ReseauNeuronesCouches r(dim);
+
+	out1.push_back(0.99);
+	out1.push_back(-0.99);
+	out2.push_back(-0.99);
+	out2.push_back(0.99);
+
+	for (int i=0;i<a.size();i++)
+	{
+		in[i]=a[i].obtenirPixels();
+		a[i].afficher(100);
+		if (i>=NBAPPRA)// Les trois derniéres images attendent pour réponse 0.01
+			out[i]=out2;
+		else
+			out[i]=out1;
+	}
+
+	cout<<"Apprentissage du jeu d'images A B contenant 30 images"<<endl<<"15 premiére image attendent A en réponse, les 15 dérniéres B"<<endl;
+	//r.apprendre(in,out,a.size());
+	r.chargerReseau("res/test.txt");
+	cout<<"---------Echantillon d'apprentissage-----------"<<endl;
+	for (int i=0;i<a.size();i++)
+	{
+		in[0]=a[i].obtenirPixels();
+		vector<double> res =r.calculerResultat(in[0]);
+		if (res[0]>=res[1])
+			cout<<"A a"<<" ";
+		else
+			cout<<"B b"<<" ";
+		for (int j=0;j<res.size();j++)
+			cout<<"Image appr "<<i<<" :"<<res[j]<<" ";
+		cout<<endl;
+		a[i].afficher(100);
+	}
+	//r.sauvegarderReseau("test.txt");
+
+	cout<<"---------Echatillon de test-----------"<<endl;
+	for (int i=0;i<NBTEST;i++)
+	{
+
+		in[0]=test[i].obtenirPixels();
+		vector<double> res =r.calculerResultat(in[0]);
+		double cor;
+		if (res[0]>=res[1])
+		{
+			cout<<"A a"<<" ";
+			cor=0;
+		}
+		else
+		{
+			cout<<"B b"<<" ";
+			cor=1;
+		}
+		if (cor==corect[i])
+			cout<<"ok ;) ";
+		else
+			cout<<"ouch :( ";
+		for (int j=0;j<res.size();j++)
+			cout<<"Image test "<<i<<" :"<<res[j]<<" ";
+		cout<<endl;
+		test[i].afficher(1000);
+	}
+	*/
+	
+}

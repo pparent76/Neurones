@@ -1,0 +1,138 @@
+\hypertarget{classReseauNeurone}{
+\section{Référence de la classe ReseauNeurone}
+\label{classReseauNeurone}\index{ReseauNeurone@{ReseauNeurone}}
+}
+Graphe d'héritage de ReseauNeurone:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classReseauNeurone}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classReseauNeurone_ac2bccb9c9106a989960246e8f173d93a}{chargerReseau} (string path)=0
+\begin{DoxyCompactList}\small\item\em Cette méthode permet de charger un réseau lu dans un fichier. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classReseauNeurone_a33c828f2e2b7a190eff04c613707a9d4}{sauvegarderReseau} (string path)=0
+\begin{DoxyCompactList}\small\item\em Cette méthode permet de sauvegarder un réseau dans un fichier. \end{DoxyCompactList}\item 
+void \hyperlink{classReseauNeurone_ad29ad61f93877aaf2ee930106d46e48b}{apprendre} (vector$<$ double $>$ $\ast$entrees, vector$<$ double $>$ $\ast$valeursAttendues, int n)
+\begin{DoxyCompactList}\small\item\em Cette méthode permet de réaliser une étape d'apprentissage. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \hyperlink{classReseauNeurone_add3e1d607bc614ca36b0375daf546106}{calculerResultat} (vector$<$ double $>$ valeurEntree)
+\begin{DoxyCompactList}\small\item\em Cette méthode permet de calculer le résultat sur la couche de sortie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classReseauNeurone_a330aab82b9bdef4e03f88522330eb10f}{
+vector$<$ \hyperlink{classNeurone}{Neurone} $>$ {\bfseries Neurones}}
+\label{classReseauNeurone_a330aab82b9bdef4e03f88522330eb10f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+représentant un réseau de neurones. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classReseauNeurone_ad29ad61f93877aaf2ee930106d46e48b}{
+\index{ReseauNeurone@{ReseauNeurone}!apprendre@{apprendre}}
+\index{apprendre@{apprendre}!ReseauNeurone@{ReseauNeurone}}
+\subsubsection[{apprendre}]{\setlength{\rightskip}{0pt plus 5cm}void ReseauNeurone::apprendre (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$ $\ast$}]{entrees, }
+\item[{vector$<$ double $>$ $\ast$}]{valeursAttendues, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}
+\label{classReseauNeurone_ad29ad61f93877aaf2ee930106d46e48b}
+
+
+Cette méthode permet de réaliser une étape d'apprentissage. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em entrees} & liste des entrées pour le jeu d'apprentiassage. \\
+\hline
+{\em valeursAttendues} & les valeurs attendues en sortie pour chacune de ses entrées. \\
+\hline
+{\em n} & la taille de l'échantillon d'apprentissage. \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée dans \hyperlink{classReseauNeuronesCouches_ad368a99d25583fd49d384516dacb3062}{ReseauNeuronesCouches}.
+
+\hypertarget{classReseauNeurone_add3e1d607bc614ca36b0375daf546106}{
+\index{ReseauNeurone@{ReseauNeurone}!calculerResultat@{calculerResultat}}
+\index{calculerResultat@{calculerResultat}!ReseauNeurone@{ReseauNeurone}}
+\subsubsection[{calculerResultat}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ ReseauNeurone::calculerResultat (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{valeurEntree}
+\end{DoxyParamCaption}
+)}}
+\label{classReseauNeurone_add3e1d607bc614ca36b0375daf546106}
+
+
+Cette méthode permet de calculer le résultat sur la couche de sortie. 
+
+\begin{DoxyReturn}{Renvoie}
+la valeur des résultats. 
+\end{DoxyReturn}
+
+
+Réimplémentée dans \hyperlink{classReseauNeuronesCouches_ad2cb2070ae32e8772bf82e6d06221bdd}{ReseauNeuronesCouches}.
+
+\hypertarget{classReseauNeurone_ac2bccb9c9106a989960246e8f173d93a}{
+\index{ReseauNeurone@{ReseauNeurone}!chargerReseau@{chargerReseau}}
+\index{chargerReseau@{chargerReseau}!ReseauNeurone@{ReseauNeurone}}
+\subsubsection[{chargerReseau}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool ReseauNeurone::chargerReseau (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classReseauNeurone_ac2bccb9c9106a989960246e8f173d93a}
+
+
+Cette méthode permet de charger un réseau lu dans un fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em path} & une chaine de caractère décrivant le nom du fichier dans lequel est stocké le réseau. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Si oui ou non le chargement s'est bien déroulé. 
+\end{DoxyReturn}
+
+
+Implémenté dans \hyperlink{classReseauNeuronesCouches_a22f5c01ae1f95cba98cc78f08729ea52}{ReseauNeuronesCouches}.
+
+\hypertarget{classReseauNeurone_a33c828f2e2b7a190eff04c613707a9d4}{
+\index{ReseauNeurone@{ReseauNeurone}!sauvegarderReseau@{sauvegarderReseau}}
+\index{sauvegarderReseau@{sauvegarderReseau}!ReseauNeurone@{ReseauNeurone}}
+\subsubsection[{sauvegarderReseau}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool ReseauNeurone::sauvegarderReseau (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classReseauNeurone_a33c828f2e2b7a190eff04c613707a9d4}
+
+
+Cette méthode permet de sauvegarder un réseau dans un fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em path} & une chaine de caractère décrivant le nom du fichier dans lequel on stocke le réseau. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Si oui ou non la sauvegarde s'est bien déroulée. 
+\end{DoxyReturn}
+
+
+Implémenté dans \hyperlink{classReseauNeuronesCouches_af2506fed92099704b3da33dcdbb534a7}{ReseauNeuronesCouches}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+/home/cocouf/Documents/gm4/gm11-\/neurones/src/ReseauNeurone.h\end{DoxyCompactItemize}

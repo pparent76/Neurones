@@ -1,0 +1,9 @@
+#include "FonctionTransfert.h"
+
+/// class Sigmoïde - 
+class Sigmoide : public FonctionTransfert {
+public:
+	static double f (double x);
+	static double f_inverse (double x);
+	static double f_derive (double x);
+};

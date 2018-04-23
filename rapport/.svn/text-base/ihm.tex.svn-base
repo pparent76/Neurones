@@ -1,0 +1,208 @@
+%\documentclass[11pt,a4paper]{report}
+%\usepackage[utf8]{inputenc}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{graphicx}
+%\usepackage{geometry}
+%\usepackage{float}
+%\begin{document}
+
+\section{Le menu principal}
+Le menu principal va afficher tout les fonctions principales du programmes. Il s'agit de: \newline
+
+\fbox{
+\begin{minipage}{1\textwidth}
+Projet C++: Réseaux Neurones \newline
+
+====================== MENU =================== \newline
+1. Mode Automatique\newline
+2. Apprentissage\newline
+3. Reconnaissance\newline
+0. Quitter\newline
+\end{minipage}}
+
+\section{Mode automatique}
+Si le choix est 1, le programme tourne avec es param\`etres par défaut. On a un ensemble d'image a et b qui est donné, et on va tester si on peut les différencier.
+
+\begin{verbatim}
+Faire tourner le programme avec les paramètres par défaut()
+Apprentissage du jeu d'images A B contenant 30 images
+15 premières images attendent A en réponse, les 15 dernières B
+Apprentissage
+0%
+0.833333%
+...
+98.3333%
+99.1667%
+---------Echantillon d'apprentissage-----------
+A a Image appr 0 :0.992383 Image appr 0 :-0.992422 
+A a Image appr 1 :0.992364 Image appr 1 :-0.992361 
+...
+A a Image appr 22 :0.975503 Image appr 22 :-0.975471 
+A a Image appr 23 :0.971372 Image appr 23 :-0.971625 
+B b Image appr 24 :-0.989786 Image appr 24 :0.989907 
+B b Image appr 25 :-0.980391 Image appr 25 :0.980473 
+...
+B b Image appr 47 :-0.990786 Image appr 47 :0.990857 
+B b Image appr 48 :-0.993504 Image appr 48 :0.993523 
+Ouverture du fichier de sauvegarde
+Fermeture du fichier de sauvegarde
+---------Echantillon de test-----------
+B b ok ;) Image test 0 :-0.991597 Image test 0 :0.991683 
+A a ok ;) Image test 1 :0.466849 Image test 1 :-0.467163 
+A a ok ;) Image test 2 :0.119832 Image test 2 :-0.122299 
+B b ok ;) Image test 3 :-0.988773 Image test 3 :0.988838 
+A a ok ;) Image test 4 :0.986736 Image test 4 :-0.986759 
+A a ok ;) Image test 5 :0.914367 Image test 5 :-0.914328 
+A a ok ;) Image test 6 :0.0387813 Image test 6 :-0.0386743 
+B b ok ;) Image test 7 :-0.986668 Image test 7 :0.986764 
+B b ok ;) Image test 8 :-0.9753 Image test 8 :0.975194 
+A a ok ;) Image test 9 :0.793187 Image test 9 :-0.794556 
+A a ok ;) Image test 10 :0.791338 Image test 10 :-0.792993 
+A a ok ;) Image test 11 :0.972948 Image test 11 :-0.973066 
+A a ok ;) Image test 12 :0.992915 Image test 12 :-0.992907 
+A a ok ;) Image test 13 :0.930262 Image test 13 :-0.930265 
+B b ok ;) Image test 14 :-0.491248 Image test 14 :0.493489 
+\end{verbatim}
+
+%\fbox{
+%\begin{minipage}{1\textwidth}
+%Choix : 1\newline
+%=============================================== \newline
+%
+%faire tourner le programme avec des parametres par défaut() \newline
+%Apprentissage du jeu d'images A B contenant 30 images\newline
+%15 premiére image attendent A en réponse, les 15 dérniéres B\newline
+%Nombre de couches 4\newline
+%---------Echantillon d'apprentissage-----------\newline
+%A a Image appr 0 :0.992383 Image appr 0 :-0.992422\newline 
+%A a Image appr 1 :0.992364 Image appr 1 :-0.992361 \newline
+%A a Image appr 2 :0.99349 Image appr 2 :-0.993516 \newline
+%A a Image appr 3 :0.992037 Image appr 3 :-0.992066 \newline
+%A a Image appr 4 :0.990245 Image appr 4 :-0.990282 \newline
+%A a Image appr 5 :0.988849 Image appr 5 :-0.98887 \newline
+%A a Image appr 6 :0.98541 Image appr 6 :-0.985357 \newline
+%A a Image appr 7 :0.990105 Image appr 7 :-0.990144 \newline
+%A a Image appr 8 :0.984867 Image appr 8 :-0.984845 \newline
+%A a Image appr 9 :0.98159 Image appr 9 :-0.98165 \newline
+%A a Image appr 10 :0.974303 Image appr 10 :-0.974481\newline 
+%A a Image appr 11 :0.971432 Image appr 11 :-0.971355\newline 
+%A a Image appr 12 :0.976854 Image appr 12 :-0.976665\newline 
+%A a Image appr 13 :0.972767 Image appr 13 :-0.972724\newline 
+%A a Image appr 14 :0.979867 Image appr 14 :-0.980029\newline 
+%A a Image appr 15 :0.97219 Image appr 15 :-0.971962 \newline
+%A a Image appr 16 :0.989196 Image appr 16 :-0.989245\newline 
+%A a Image appr 17 :0.991669 Image appr 17 :-0.991661\newline 
+%A a Image appr 18 :0.982455 Image appr 18 :-0.98239 \newline
+%A a Image appr 19 :0.989519 Image appr 19 :-0.98952 \newline
+%A a Image appr 20 :0.980113 Image appr 20 :-0.980542\newline 
+%A a Image appr 21 :0.992943 Image appr 21 :-0.992982\newline 
+%A a Image appr 22 :0.975503 Image appr 22 :-0.975471\newline 
+%A a Image appr 23 :0.971372 Image appr 23 :-0.971624\newline 
+%B b Image appr 24 :-0.989786 Image appr 24 :0.989907\newline 
+%B b Image appr 25 :-0.980391 Image appr 25 :0.980473\newline 
+%B b Image appr 26 :-0.979724 Image appr 26 :0.979869\newline 
+%B b Image appr 27 :-0.987759 Image appr 27 :0.987935\newline 
+%B b Image appr 28 :-0.989009 Image appr 28 :0.989028\newline 
+%B b Image appr 29 :-0.991693 Image appr 29 :0.991762\newline 
+%B b Image appr 30 :-0.982201 Image appr 30 :0.982077\newline 
+%B b Image appr 31 :-0.993486 Image appr 31 :0.993517\newline 
+%B b Image appr 32 :-0.990494 Image appr 32 :0.990465\newline 
+%B b Image appr 33 :-0.981015 Image appr 33 :0.980937\newline 
+%B b Image appr 34 :-0.974582 Image appr 34 :0.974495\newline 
+%B b Image appr 35 :-0.983483 Image appr 35 :0.983359\newline 
+%B b Image appr 36 :-0.988139 Image appr 36 :0.988225\newline 
+%B b Image appr 37 :-0.98496 Image appr 37 :0.985107 \newline
+%B b Image appr 38 :-0.975069 Image appr 38 :0.975116\newline 
+%B b Image appr 39 :-0.979455 Image appr 39 :0.979357\newline 
+%B b Image appr 40 :-0.97496 Image appr 40 :0.975017 \newline
+%B b Image appr 41 :-0.975214 Image appr 41 :0.975062\newline 
+%B b Image appr 42 :-0.970069 Image appr 42 :0.970275\newline 
+%B b Image appr 43 :-0.992843 Image appr 43 :0.992881\newline 
+%B b Image appr 44 :-0.985963 Image appr 44 :0.986048\newline 
+%B b Image appr 45 :-0.978272 Image appr 45 :0.978077\newline 
+%B b Image appr 46 :-0.991868 Image appr 46 :0.991927\newline 
+%B b Image appr 47 :-0.990786 Image appr 47 :0.990857\newline 
+%B b Image appr 48 :-0.993504 Image appr 48 :0.993523\newline 
+%\end{minipage}} \newline
+
+\section{Apprentissage}
+%\textbf{Choix 2 : Apprentissage}\newline
+Si le choix est 2, le programme utilise le jeu d'apprentissage pour générer un nouveau réseau, et sauvegarde le réseau dans un fichier au choix.
+
+\begin{verbatim}
+Apprendre et sauvegarder le réseau
+Entrer l'addresse de l'image
+img/appr_a1.bmp
+Entrer l'addresse souhaitée où l'on sauvegarde le réseau
+res/test.txt
+Apprentissage
+0%
+0.833333%
+...
+98.3333%
+99.1667%
+Ouverture du fichier de sauvegarde
+Fermeture du fichier de sauvegarde
+Votre réseau est sauvegardé à l'adresse res/test.txt
+\end{verbatim}
+
+%\fbox{
+%\begin{minipage}{1\textwidth}
+%======================= MENU ===================\newline
+%
+%1. Mode Automatique\newline
+%2. Apprentissage\newline
+%3. Reconnaissance\newline
+%0. Quitter\newline
+% 
+%Choix : 2               \newline  
+%================================================ \newline
+%
+%Apprendre et sauvegarder le reseau \newline
+%Entrer l'addresse de l'image \newline
+%img/appr\_a1.bmp \newline
+% Entrer l'addresse souhaite ou on sauvegarde le reseau \newline
+%res/test.txt \newline
+%Apprentissage\newline
+%Ouverture du fichier de sauvegarde  \newline
+%Fermeture du fichier de sauvegarde \newline
+% Votre reseau est sauvegarde a res/resultat.txt \newline
+%\end{minipage}} \newline
+
+\section{Reconnaissance}
+Enfin, pour le choix numéro 3, le programme propose de reconnaitre un caractère.
+\begin{verbatim}
+Reconnaissance
+Entrer l'addresse de l'image
+img/appr_a1.bmp
+Entrer un réseau
+res/test.txt
+Nombre de couches 4
+C'est le caractère numéro :1 (a)
+\end{verbatim}
+
+%\fbox{
+%\begin{minipage}{1\textwidth}
+%======================= MENU ===================\newline
+%
+%1. Mode Automatique\newline
+%2. Apprentissage\newline
+%3. Reconnaissance\newline
+%0. Quitter\newline
+%  
+%Choix : 3\newline
+%=============================================== \newline
+%
+%Reconnaissance\newline
+%Entrer l'addresse de l'image\newline
+%img/appr\_a1.bmp\newline
+%Entrer un reseau\newline
+%res/test.txt\newline
+%Nombre de couches 4\newline
+%C'est le caractere numero :1 (a)\newline
+%\end{minipage}}
+
+
+%\end{document}

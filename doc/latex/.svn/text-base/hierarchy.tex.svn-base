@@ -1,0 +1,19 @@
+\section{Hiérarchie des classes}
+Cette liste d'héritage est classée approximativement par ordre alphabétique :\begin{DoxyCompactList}
+\item \contentsline{section}{FonctionTransfert}{\pageref{classFonctionTransfert}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{Sigmoide}{\pageref{classSigmoide}}{}
+\end{DoxyCompactList}
+\item \contentsline{section}{IHM}{\pageref{classIHM}}{}
+\item \contentsline{section}{Image}{\pageref{classImage}}{}
+\item \contentsline{section}{Neurone}{\pageref{classNeurone}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{NeuroneChainee}{\pageref{classNeuroneChainee}}{}
+\end{DoxyCompactList}
+\item \contentsline{section}{ReseauNeurone}{\pageref{classReseauNeurone}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{ReseauNeuronesChainees}{\pageref{classReseauNeuronesChainees}}{}
+\item \contentsline{section}{ReseauNeuronesCouches}{\pageref{classReseauNeuronesCouches}}{}
+\end{DoxyCompactList}
+\item \contentsline{section}{ReseauNeuroneChainees}{\pageref{classReseauNeuroneChainees}}{}
+\end{DoxyCompactList}

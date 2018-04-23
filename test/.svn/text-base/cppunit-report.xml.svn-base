@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
+<TestRun>
+  <FailedTests></FailedTests>
+  <SuccessfulTests>
+    <Test id="1">
+      <Name>Image_Test::test_Chargement</Name>
+    </Test>
+    <Test id="2">
+      <Name>Image_Test::test_un_pixel</Name>
+    </Test>
+    <Test id="3">
+      <Name>Image_Test::test_les_pixels</Name>
+    </Test>
+    <Test id="4">
+      <Name>Image_Test::test_lignes_colone</Name>
+    </Test>
+    <Test id="5">
+      <Name>Test_Neurone::test_Constructeur</Name>
+    </Test>
+    <Test id="6">
+      <Name>Test_Neurone::test_CalculeValeurTransphert</Name>
+    </Test>
+    <Test id="7">
+      <Name>Test_Neurone::test_ValeurEntree</Name>
+    </Test>
+    <Test id="8">
+      <Name>Test_Neurone::test_ValeurSortie</Name>
+    </Test>
+    <Test id="9">
+      <Name>Test_ReseauNeuronesCouche::test_Constructeur</Name>
+    </Test>
+    <Test id="10">
+      <Name>Test_ReseauNeuronesCouche::test_Constructeur2</Name>
+    </Test>
+    <Test id="11">
+      <Name>Test_ReseauNeuronesCouche::test_CoherenceTailleCouche</Name>
+    </Test>
+    <Test id="12">
+      <Name>Test_ReseauNeuronesCouche::test_ValeurCouche</Name>
+    </Test>
+    <Test id="13">
+      <Name>Test_ReseauNeuronesCouche::test_setEntree</Name>
+    </Test>
+    <Test id="14">
+      <Name>Test_ReseauNeuronesCouche::test_ValeurSortie</Name>
+    </Test>
+    <Test id="15">
+      <Name>Test_ReseauNeuronesCouche::test_ValeurAttendueCouchePrec</Name>
+    </Test>
+    <Test id="16">
+      <Name>Test_Sigmoide::test_Fonction</Name>
+    </Test>
+    <Test id="17">
+      <Name>Test_Sigmoide::test_Inverse</Name>
+    </Test>
+    <Test id="18">
+      <Name>Test_Sigmoide::test_derive</Name>
+    </Test>
+  </SuccessfulTests>
+  <Statistics>
+    <Tests>18</Tests>
+    <FailuresTotal>0</FailuresTotal>
+    <Errors>0</Errors>
+    <Failures>0</Failures>
+  </Statistics>
+</TestRun>

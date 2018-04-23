@@ -1,0 +1,122 @@
+\begin{theindex}
+
+  \item {$\sim $IHM}
+    \subitem {IHM}, \hyperpage{6}
+  \item {$\sim $Image}
+    \subitem {Image}, \hyperpage{7}
+
+  \indexspace
+
+  \item {apprendre}
+    \subitem {ReseauNeurone}, \hyperpage{12}
+    \subitem {ReseauNeuronesCouches}, \hyperpage{15}
+
+  \indexspace
+
+  \item {calculerErreur}
+    \subitem {NeuroneChainee}, \hyperpage{11}
+  \item {calculerResultat}
+    \subitem {ReseauNeurone}, \hyperpage{13}
+    \subitem {ReseauNeuronesCouches}, \hyperpage{16}
+  \item {calculerValeur}
+    \subitem {NeuroneChainee}, \hyperpage{11}
+  \item {calculeValeurTransfert}
+    \subitem {Neurone}, \hyperpage{9}
+  \item {centerImage}
+    \subitem {Image}, \hyperpage{7}
+  \item {chargerNeurone}
+    \subitem {Neurone}, \hyperpage{9}
+  \item {chargerReseau}
+    \subitem {ReseauNeurone}, \hyperpage{13}
+    \subitem {ReseauNeuronesCouches}, \hyperpage{16}
+
+  \indexspace
+
+  \item {FonctionTransfert}, \hyperpage{5}
+
+  \indexspace
+
+  \item {getIdentifiant}
+    \subitem {Neurone}, \hyperpage{9}
+  \item {getPoidsSynaptic}
+    \subitem {Neurone}, \hyperpage{10}
+  \item {getValeurSortie}
+    \subitem {Neurone}, \hyperpage{10}
+
+  \indexspace
+
+  \item {IHM}, \hyperpage{5}
+    \subitem {$\sim $IHM}, \hyperpage{6}
+    \subitem {IHM}, \hyperpage{6}
+    \subitem {menu}, \hyperpage{6}
+  \item {Image}, \hyperpage{6}
+    \subitem {$\sim $Image}, \hyperpage{7}
+    \subitem {centerImage}, \hyperpage{7}
+    \subitem {Image}, \hyperpage{7}
+    \subitem {LigneColonne}, \hyperpage{7}
+    \subitem {obtenirPixel}, \hyperpage{7}
+    \subitem {obtenirPixels}, \hyperpage{8}
+
+  \indexspace
+
+  \item {LigneColonne}
+    \subitem {Image}, \hyperpage{7}
+
+  \indexspace
+
+  \item {menu}
+    \subitem {IHM}, \hyperpage{6}
+
+  \indexspace
+
+  \item {Neurone}, \hyperpage{8}
+    \subitem {calculeValeurTransfert}, \hyperpage{9}
+    \subitem {chargerNeurone}, \hyperpage{9}
+    \subitem {getIdentifiant}, \hyperpage{9}
+    \subitem {getPoidsSynaptic}, \hyperpage{10}
+    \subitem {getValeurSortie}, \hyperpage{10}
+    \subitem {Neurone}, \hyperpage{9}
+    \subitem {sauvegarderNeurone}, \hyperpage{10}
+    \subitem {setPoidsSynaptic}, \hyperpage{10}
+    \subitem {setValeurEntree}, \hyperpage{10}
+  \item {NeuroneChainee}, \hyperpage{11}
+    \subitem {calculerErreur}, \hyperpage{11}
+    \subitem {calculerValeur}, \hyperpage{11}
+
+  \indexspace
+
+  \item {obtenirPixel}
+    \subitem {Image}, \hyperpage{7}
+  \item {obtenirPixels}
+    \subitem {Image}, \hyperpage{8}
+
+  \indexspace
+
+  \item {ReseauNeurone}, \hyperpage{12}
+    \subitem {apprendre}, \hyperpage{12}
+    \subitem {calculerResultat}, \hyperpage{13}
+    \subitem {chargerReseau}, \hyperpage{13}
+    \subitem {sauvegarderReseau}, \hyperpage{13}
+  \item {ReseauNeuroneChainees}, \hyperpage{14}
+  \item {ReseauNeuronesChainees}, \hyperpage{14}
+  \item {ReseauNeuronesCouches}, \hyperpage{14}
+    \subitem {apprendre}, \hyperpage{15}
+    \subitem {calculerResultat}, \hyperpage{16}
+    \subitem {chargerReseau}, \hyperpage{16}
+    \subitem {ReseauNeuronesCouches}, \hyperpage{15}
+    \subitem {sauvegarderReseau}, \hyperpage{16}
+
+  \indexspace
+
+  \item {sauvegarderNeurone}
+    \subitem {Neurone}, \hyperpage{10}
+  \item {sauvegarderReseau}
+    \subitem {ReseauNeurone}, \hyperpage{13}
+    \subitem {ReseauNeuronesCouches}, \hyperpage{16}
+  \item {setPoidsSynaptic}
+    \subitem {Neurone}, \hyperpage{10}
+  \item {setValeurEntree}
+    \subitem {Neurone}, \hyperpage{10}
+  \item {Sigmoide}, \hyperpage{17}
+
+\end{theindex}

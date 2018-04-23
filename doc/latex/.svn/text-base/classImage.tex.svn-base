@@ -1,0 +1,134 @@
+\hypertarget{classImage}{
+\section{Référence de la classe Image}
+\label{classImage}\index{Image@{Image}}
+}
+
+
+Cette classe a pour but de charger facilement des images et de réaliser des traitements basiques dessus.  
+
+
+
+
+{\ttfamily \#include $<$Image.h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classImage_ab5a8cd26aa2d32873ab871eef30bedf3}{Image} (string path)
+\item 
+\hyperlink{classImage_a0294f63700543e11c0f0da85601c7ae5}{$\sim$Image} ()
+\item 
+void \hyperlink{classImage_acf2a77d612bcbcfb91974dcfb484638c}{centerImage} ()
+\item 
+int \hyperlink{classImage_a2e162095e39208d81a694ec1db43de62}{obtenirPixel} (int x, int y)
+\item 
+vector$<$ double $>$ \hyperlink{classImage_a481a80ba76112618ef6a2320a40278af}{obtenirPixels} ()
+\item 
+vector$<$ int $>$ \hyperlink{classImage_ae07d3be7756c4bf735153a65b6281494}{LigneColonne} ()
+\item 
+\hypertarget{classImage_a4d957034ad17e3911a4d9f7decdda22c}{
+void \hyperlink{classImage_a4d957034ad17e3911a4d9f7decdda22c}{afficher} ()}
+\label{classImage_a4d957034ad17e3911a4d9f7decdda22c}
+
+\begin{DoxyCompactList}\small\item\em Cette méthode permet d'afficher l'image jusqu'à ce que l'utilisateur ferme la fenêtre. \end{DoxyCompactList}\item 
+\hypertarget{classImage_a490bfd3790cdd37f306e0e1751189e63}{
+void \hyperlink{classImage_a490bfd3790cdd37f306e0e1751189e63}{afficher} (int n)}
+\label{classImage_a490bfd3790cdd37f306e0e1751189e63}
+
+\begin{DoxyCompactList}\small\item\em Cette méthode permet d'afficher l'image n millisecondes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classImage_aba9b898604a39ecac2ab00c448e77a3a}{
+class {\bfseries Image\_\-Test}}
+\label{classImage_aba9b898604a39ecac2ab00c448e77a3a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Cette classe a pour but de charger facilement des images et de réaliser des traitements basiques dessus. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classImage_ab5a8cd26aa2d32873ab871eef30bedf3}{
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}Image::Image (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)}}
+\label{classImage_ab5a8cd26aa2d32873ab871eef30bedf3}
+Ceci est le constructeur de la classe \hyperlink{classImage}{Image} qui permet de charger une image. 
+\begin{DoxyParams}{Paramètres}
+{\em path} & le chemin (relatif) où se trouve l'image à charger \\
+\hline
+\end{DoxyParams}
+\hypertarget{classImage_a0294f63700543e11c0f0da85601c7ae5}{
+\index{Image@{Image}!$\sim$Image@{$\sim$Image}}
+\index{$\sim$Image@{$\sim$Image}!Image@{Image}}
+\subsubsection[{$\sim$Image}]{\setlength{\rightskip}{0pt plus 5cm}Image::$\sim$Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classImage_a0294f63700543e11c0f0da85601c7ae5}
+Ceci est le destructeur de la classe \hyperlink{classImage}{Image} qui permet de charger une image. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classImage_acf2a77d612bcbcfb91974dcfb484638c}{
+\index{Image@{Image}!centerImage@{centerImage}}
+\index{centerImage@{centerImage}!Image@{Image}}
+\subsubsection[{centerImage}]{\setlength{\rightskip}{0pt plus 5cm}void Image::centerImage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classImage_acf2a77d612bcbcfb91974dcfb484638c}
+Cette méthode a pour but de recentrer l'image dans l'optique d'un prétraitement. \hypertarget{classImage_ae07d3be7756c4bf735153a65b6281494}{
+\index{Image@{Image}!LigneColonne@{LigneColonne}}
+\index{LigneColonne@{LigneColonne}!Image@{Image}}
+\subsubsection[{LigneColonne}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$ int $>$ Image::LigneColonne (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classImage_ae07d3be7756c4bf735153a65b6281494}
+Cette méthode retourne la somme des pixels sur chaque ligne et colonne. \begin{DoxyReturn}{Renvoie}
+renvois un tableau de données. 
+\end{DoxyReturn}
+\hypertarget{classImage_a2e162095e39208d81a694ec1db43de62}{
+\index{Image@{Image}!obtenirPixel@{obtenirPixel}}
+\index{obtenirPixel@{obtenirPixel}!Image@{Image}}
+\subsubsection[{obtenirPixel}]{\setlength{\rightskip}{0pt plus 5cm}int Image::obtenirPixel (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}
+\label{classImage_a2e162095e39208d81a694ec1db43de62}
+Retourne la valeur du pixel souhaité 
+\begin{DoxyParams}{Paramètres}
+{\em x} & ordonnée du pixel \\
+\hline
+{\em y} & abscisse du pixel \\
+\hline
+\end{DoxyParams}
+\hypertarget{classImage_a481a80ba76112618ef6a2320a40278af}{
+\index{Image@{Image}!obtenirPixels@{obtenirPixels}}
+\index{obtenirPixels@{obtenirPixels}!Image@{Image}}
+\subsubsection[{obtenirPixels}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Image::obtenirPixels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classImage_a481a80ba76112618ef6a2320a40278af}
+Retourne le tableau de pixels de l'image \begin{DoxyReturn}{Renvoie}
+tableau avec tous les pixels. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants :\begin{DoxyCompactItemize}
+\item 
+/home/cocouf/Documents/gm4/gm11-\/neurones/src/Image.h\item 
+/home/cocouf/Documents/gm4/gm11-\/neurones/src/Image.cpp\end{DoxyCompactItemize}

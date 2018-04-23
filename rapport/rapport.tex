@@ -1,0 +1,61 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage[french]{babel}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{color}
+\usepackage{pdfpages}
+\usepackage{listings}
+
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+
+\title{Apprentissage symbolique avec des r\'eseaux de neurones.}
+\author{Corentin Lothod\'e, Pierre Parent, Duy Anh Trinh}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Analyse des besoins}
+	\input{adb_objectifs_fonctionnels}
+	\input{adb_qualite_tests}
+	\input{adb_description_reseau}
+
+\chapter{Sp\'ecifications fonctionnelles}
+	\input{sf_module_interface}
+	\input{sf_module_traitement_entree}
+	\input{sf_module_reseau}
+	\input{sf_mod_uml}
+	\input{test_integration}
+
+\chapter{Documentation}
+\includepdf[pages = {1-25}]{../doc/latex/refman.pdf}
+
+\chapter{Tests}
+	\input{tests.tex}
+
+\chapter{IHM}
+	\input{ihm.tex}
+
+\chapter*{Conclusion}
+Ce projet nous a permis un enrichissement dans plusieurs domaines. Premièrement,  travailler sur les réseaux de neurones nous a forcé à apprendre leur fonctionnement et donc effectuer une recherche documentaire. Elle a été essentielle dans la réussite de ce projet car elle nous a permis de comprendre rapidement leur fonctionnement intrinsèque.
+
+Deuxièmement, la gestion d'un projet informatique. Nous avons eu de nombreux débats sur les choix de modélisation et d'implémentation. Nous avons également utilisés des logiciels très utiles pour la documentation (\texttt{Doxygen}) et pour la gestion des versions (\texttt{Subversion}). Nous avons pu tirer parti d'un certain nombre de spécificité du language C++, notamment ses bibliothèques standards et son orientation objet. Les IDE (\texttt{KDevelop}, \texttt{Eclipse CDT}) disponibles pour ce langage rendent le développement rapide et efficace.
+
+Enfin, l'implémentation des réseaux de neurones nous a permis d'apprendre une nouvelle forme de recherche opérationnelle. Cette méthode de résolution est suprenante car avec un principe simple, il est possible de modéliser de nombreux comportements. Une fois la \textit{longue} phase d'apprentissage terminée, la reconnaissance d'un caractère est très rapide car ne consistant qu'à un certain nombre d'addition et d'application de la fonction de transfert.
+
+Il pourrait être intéressant d'essayer d'autres applications des réseaux de neurones, pour de la classification phylogénétique par exemple à partir de séquence ADN. Où encore, optimiser le traitement par une parallélisation des tâches.
+
+\end{document}
